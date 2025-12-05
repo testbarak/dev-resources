@@ -1,8 +1,11 @@
+
 const { context, getOctokit } = require('@actions/github')
 
 const token = process.env.GITHUB_TOKEN
 const octokit = getOctokit(token)
 
+console.log("-------i am in controle-------")
+console.log(process.env.GITHUB_TOKEN)
 async function run() {
     try {
         const pr = context.payload.pull_request
